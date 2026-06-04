@@ -21,6 +21,7 @@ export interface UserSession {
   // Field lama yang masih dipertahankan untuk kompatibilitas
   cvFileName?: string;   // Nama file CV terakhir yang diunggah (dari mock)
   cvUploadedAt?: string; // Tanggal upload CV (format: ISO string)
+  cvs?: { filename: string; originalName: string }[];
 }
 
 // ─── Output AI: Data Satu Rekomendasi Lowongan ──────────────
@@ -71,6 +72,7 @@ export interface APIJobRecommendation {
   location?: string;
   type?: string;
   source?: string;
+  url?: string;
 }
 
 export interface RecommendationData {

@@ -23,9 +23,9 @@ import { useAuthContext } from '../../context/AuthContext';
 import { recommendationApi, userApi, authApi, cvApi, savedJobApi } from '../../services/api';
 
 // Import mock data & constants (digunakan sebagai fallback)
-import { MOCK_AI_RESPONSE, MOCK_MARKET_TRENDS, MOCK_LEARN_RESOURCES, STORAGE_KEYS } from '../../utils/mockData';
 import type { SavedJob, AIResponseData } from '../../types/dashboard';
 import { convertRecommendationToMockFormat } from '../../types/dashboard';
+import { MOCK_AI_RESPONSE, MOCK_LEARN_RESOURCES, MOCK_MARKET_TRENDS } from '../../utils/mockData';
 
 // Import semua komponen dashboard
 import DashboardSidebar, { UserAvatar } from '../../components/dashboard/DashboardSidebar';
@@ -746,7 +746,7 @@ const DashboardPage = () => {
                       // Fallback if no skills are recommended
                       const resourcesToDisplay = dynamicResources.length > 0 ? dynamicResources : MOCK_LEARN_RESOURCES;
 
-                      return resourcesToDisplay.map((resource, i) => (
+                      return resourcesToDisplay.map((resource: any, i: number) => (
                         <LearnCard key={resource.id} resource={resource} index={i} language={language} />
                       ));
                     })()}

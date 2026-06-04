@@ -32,17 +32,6 @@ const WelcomePanel: React.FC<WelcomePanelProps> = ({ user, recommendedField, lan
     return () => clearTimeout(timer);
   }, []);
 
-  // Format tanggal upload CV ke format lokal Indonesia / Inggris
-  const formatDate = (isoString?: string): string => {
-    if (!isoString) return language === 'id' ? 'Belum diunggah' : 'Not uploaded yet';
-    const date = new Date(isoString);
-    return date.toLocaleDateString(language === 'id' ? 'id-ID' : 'en-US', {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric',
-    });
-  };
-
   // Menentukan sapaan berdasarkan jam saat ini
   const getGreeting = (): string => {
     const hour = new Date().getHours();

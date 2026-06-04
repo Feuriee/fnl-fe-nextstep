@@ -99,7 +99,7 @@ const AuthPage = () => {
   const [newPasswordError, setNewPasswordError] = useState('')
   const [confirmPasswordError, setConfirmPasswordError] = useState('')
   const [passwordLoading, setPasswordLoading] = useState(false)
-  const [, setResetToken] = useState('')
+  const [resetToken, setResetToken] = useState('')
 
   // ── Reset Forgot State when entering/exiting forgot mode ───
   useEffect(() => {
