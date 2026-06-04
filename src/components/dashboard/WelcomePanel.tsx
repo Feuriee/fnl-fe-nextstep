@@ -99,7 +99,7 @@ const WelcomePanel: React.FC<WelcomePanelProps> = ({ user, recommendedField, lan
                   </svg>
                   {user.cvs && user.cvs.length > 0 ? (
                     <a
-                      href={`http://localhost:5000/uploads/${user.cvs[0].filename}`}
+                      href={`${import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace('/api/v1', '') : 'http://localhost:5000'}/uploads/${user.cvs[0].filename}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-white text-[11.5px] font-medium truncate max-w-[150px] hover:underline"
