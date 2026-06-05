@@ -810,7 +810,7 @@ const DashboardPage = () => {
               </div>
 
               {/* Widget tren pasar */}
-              <MarketTrendWidget trends={MOCK_MARKET_TRENDS} language={language} />
+              <MarketTrendWidget language={language} />
             </div>
           )}
 
