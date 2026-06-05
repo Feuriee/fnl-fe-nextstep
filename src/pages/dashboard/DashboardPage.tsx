@@ -25,7 +25,7 @@ import { recommendationApi, userApi, authApi, cvApi, savedJobApi } from '../../s
 // Import mock data & constants (digunakan sebagai fallback)
 import type { SavedJob, AIResponseData } from '../../types/dashboard';
 import { convertRecommendationToMockFormat } from '../../types/dashboard';
-import { MOCK_AI_RESPONSE, MOCK_LEARN_RESOURCES, MOCK_MARKET_TRENDS } from '../../utils/mockData';
+import { MOCK_AI_RESPONSE, MOCK_LEARN_RESOURCES } from '../../utils/mockData';
 
 // Import semua komponen dashboard
 import DashboardSidebar, { UserAvatar } from '../../components/dashboard/DashboardSidebar';
